@@ -51,6 +51,15 @@ public class Player : MonoBehaviour
 
       spriteRenderer.sprite = sprites[spriteIndex];
     }
-
-    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Obstacle")) 
+        {
+            FindObjectOfType<GameManager>().GameOver();
+        } 
+        else if (other.gameObject.CompareTag("Scoring")) 
+        {
+            FindObjectOfType<GameManager>().IncreaseScore();
+        }
+    }
 }
