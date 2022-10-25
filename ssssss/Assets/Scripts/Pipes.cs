@@ -13,7 +13,7 @@ public class Pipes : MonoBehaviour
         leftEdge = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 1f;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         transform.position += Vector3.left * speed * Time.deltaTime;
 

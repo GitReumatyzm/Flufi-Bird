@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class AudioButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   private AudioSource audioSrc;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   private void Start()
+   {
+    audioSrc = GetComponent<AudioSource>();
+   }
+
+   public void PlayAudioButton()
+   {
+    audioSrc.Play();
+   }
+
+   public void DontPlayAudioButton()
+   {
+    audioSrc.Stop();
+   }
 }
