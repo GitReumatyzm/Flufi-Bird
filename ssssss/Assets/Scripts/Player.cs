@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
@@ -59,6 +61,8 @@ public class Player : MonoBehaviour
 
       spriteRenderer.sprite = sprites[spriteIndex];
     }
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Obstacle")) 
