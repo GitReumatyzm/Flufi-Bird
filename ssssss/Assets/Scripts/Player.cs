@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     private Vector3 direction;
     public float gravity = -9.8f;
     public float strenght = 5f;
+    public GameObject player;
+    public GameObject explosion;
 
     private void Awake()
     {
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour
        position.y= 0f;
        transform.position = position;
        direction = Vector3.zero;
+       player.GetComponent<Renderer>().enabled = true;
     }
 
     private void Update()
@@ -68,6 +71,8 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle")) 
         {
             FindObjectOfType<GameManager>().GameOver();
+            player.GetComponent<Renderer>().enabled = false;
+            Instantiate(explosion, transform.position, Quaternion.identity);
         } 
         else if (other.gameObject.CompareTag("Scoring")) 
         {
