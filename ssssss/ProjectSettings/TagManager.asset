@@ -8,6 +8,7 @@ TagManager:
   - Scoring
   - Food
   - MyFood
+  - Particles
   layers:
   - Default
   - TransparentFX

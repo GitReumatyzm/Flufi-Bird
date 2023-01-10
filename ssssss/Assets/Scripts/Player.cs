@@ -11,16 +11,18 @@ public class Player : MonoBehaviour
     public float gravity = -9.8f;
     public float strenght = 5f;
     public GameObject player;
-    public GameObject explosion;
+    public ParticleSystem Explosion;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        Explosion = GetComponent<ParticleSystem>();
     }
 
     private void Start()
     {
         InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
+        Explosion = GetComponent<ParticleSystem>();
     }
 
     private void OnEnable()
@@ -72,7 +74,7 @@ public class Player : MonoBehaviour
         {
             FindObjectOfType<GameManager>().GameOver();
             player.GetComponent<Renderer>().enabled = false;
-            Instantiate(explosion, transform.position, Quaternion.identity);
+            Explosion.Play();
         } 
         else if (other.gameObject.CompareTag("Scoring")) 
         {

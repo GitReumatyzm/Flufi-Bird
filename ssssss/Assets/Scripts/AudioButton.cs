@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class AudioButton : MonoBehaviour
 {
-   private AudioSource audioSrc;
+   private AudioSource GameStartButton;
 
    private void Start()
    {
-    audioSrc = GetComponent<AudioSource>();
+    GameStartButton = GetComponent<AudioSource>();
    }
 
    public void PlayAudioButton()
    {
-    audioSrc.Play();
+    GameStartButton.Play();
    }
 
    public void DontPlayAudioButton()
    {
-    audioSrc.Stop();
+     GameStartButton.Stop();
    }
 }

@@ -12,7 +12,7 @@ public class FoodScore : MonoBehaviour
     void Start()
     {
         ScoreNum = 0;
-        FoodScoreText.text = "Food Score : " + ScoreNum;
+        FoodScoreText.text = "       0" + ScoreNum;
     }
     
     private void OnTriggerEnter2D(Collider2D Food)
@@ -21,7 +21,7 @@ public class FoodScore : MonoBehaviour
        {
          ScoreNum += 1;
          Destroy(Food.gameObject);
-         FoodScoreText.text = "Food Score: " + ScoreNum;
+         FoodScoreText.text = "       0" + ScoreNum;
        }
     }
 }

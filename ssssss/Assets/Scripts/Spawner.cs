@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 public class Spawner : MonoBehaviour
 {
@@ -6,6 +8,7 @@ public class Spawner : MonoBehaviour
     public float spawnRate = 1f;
     public float minHeight = -1f;
     public float maxHeight = 2f;
+
 
     private void OnEnable()
     {
