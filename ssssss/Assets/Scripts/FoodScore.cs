@@ -27,6 +27,7 @@ public class FoodScore : MonoBehaviour
          ScoreNum += 1;
          Destroy(Food.gameObject);
          FoodScoreText.text = "  :0" + ScoreNum;
+         GetComponent<AudioSource>().Play();
        }
     }
 }
