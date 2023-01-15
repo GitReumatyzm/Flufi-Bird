@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
     public float strenght = 5f;
     public float strenght2 = 3f;
     public GameObject player;
+    public Vector3 temp;
+    public AudioSource JumpSound;
+    public AudioSource GameOverSound;
+
 
     private void Awake()
     {
@@ -38,6 +42,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             direction = Vector3.up * strenght;
+            JumpSound.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.LeftAlt) || Input.GetMouseButtonDown(1) )
@@ -77,6 +82,12 @@ public class Player : MonoBehaviour
         {
             FindObjectOfType<GameManager>().GameOver();
             player.GetComponent<Renderer>().enabled = false;
+            temp = transform.localScale;
+            temp.x = 2f;
+            temp.y = 2f;
+            transform.localScale = temp;
+            GameOverSound.Play();
+            
         } 
         else if (other.gameObject.CompareTag("Scoring")) 
         {
