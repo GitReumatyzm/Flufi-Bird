@@ -18,12 +18,11 @@ public class PowerUp : MonoBehaviour
 
     void Pickup(Collider2D player)
     {
-        //1
         Instantiate(pickupEffect, transform.position, transform.rotation);
-        //2
+        
         player.transform.localScale /= multiplier;
         Physics.gravity = new Vector3(0, -5, 0);
-        //3
+       
         Destroy(gameObject);
-}
+    }
 }

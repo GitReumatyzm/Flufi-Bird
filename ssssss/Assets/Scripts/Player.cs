@@ -10,19 +10,19 @@ public class Player : MonoBehaviour
     private Vector3 direction;
     public float gravity = -9.8f;
     public float strenght = 5f;
+    public float strenght2 = 3f;
     public GameObject player;
-    public ParticleSystem Explosion;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        Explosion = GetComponent<ParticleSystem>();
     }
 
     private void Start()
     {
         InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
-        Explosion = GetComponent<ParticleSystem>();
+        Physics.gravity = new Vector3(0, -13, 0);
+        transform.localScale = Vector3.one;
     }
 
     private void OnEnable()
@@ -39,6 +39,11 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             direction = Vector3.up * strenght;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftAlt) || Input.GetMouseButtonDown(1) )
+        {
+            direction = Vector3.down * strenght2;
         }
 
         if (Input.touchCount > 0)
@@ -67,14 +72,12 @@ public class Player : MonoBehaviour
       spriteRenderer.sprite = sprites[spriteIndex];
     }
 
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Obstacle")) 
         {
             FindObjectOfType<GameManager>().GameOver();
             player.GetComponent<Renderer>().enabled = false;
-            Explosion.Play();
         } 
         else if (other.gameObject.CompareTag("Scoring")) 
         {
