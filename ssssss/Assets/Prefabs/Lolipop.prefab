@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3652105990291620865
+--- !u!1 &6989815610443374631
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8840304272636638671}
-  - component: {fileID: 2426557132616309859}
-  - component: {fileID: 27229151385554704}
-  - component: {fileID: 6726885559742130322}
-  - component: {fileID: 7947245253565801403}
+  - component: {fileID: 6989815610443374629}
+  - component: {fileID: 6989815610443374630}
+  - component: {fileID: 6989815610443374628}
+  - component: {fileID: -6608465749715519081}
   m_Layer: 0
-  m_Name: Apple
-  m_TagString: Untagged
+  m_Name: Lolipop
+  m_TagString: MyFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8840304272636638671
+--- !u!4 &6989815610443374629
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3652105990291620865}
+  m_GameObject: {fileID: 6989815610443374631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: -1, y: 6.27, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2426557132616309859
+--- !u!212 &6989815610443374630
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3652105990291620865}
+  m_GameObject: {fileID: 6989815610443374631}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f701e9c5f09c4c941a63cebe75c26710, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c7ead3bd60afe5479ab283244c29d15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,46 +86,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &27229151385554704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3652105990291620865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7d0af65396e07a429f1c408b736d589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 5
---- !u!58 &6726885559742130322
+--- !u!58 &6989815610443374628
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3652105990291620865}
+  m_GameObject: {fileID: 6989815610443374631}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.017402912, y: 0.0058009746}
   serializedVersion: 2
-  m_Radius: 0.16
---- !u!114 &7947245253565801403
+  m_Radius: 0.08023671
+--- !u!114 &-6608465749715519081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3652105990291620865}
+  m_GameObject: {fileID: 6989815610443374631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db2ec685e073d0b449b57f59e850bf97, type: 3}
+  m_Script: {fileID: 11500000, guid: a7d0af65396e07a429f1c408b736d589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 1.4
-  pickupEffect: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+  Speed: 5
