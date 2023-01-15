@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6989815610443374628}
   - component: {fileID: -6608465749715519081}
   - component: {fileID: 9162247346922429764}
+  - component: {fileID: 3823040999489355482}
   m_Layer: 0
   m_Name: Lolipop
   m_TagString: MyFood
@@ -212,3 +213,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3823040999489355482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6989815610443374631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684ca65556aeb9a4b850b36c1f0aacbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplier: 1.4
+  pickupEffect: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+  Collecting: {fileID: 9162247346922429764}

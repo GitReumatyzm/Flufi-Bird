@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplier: 1.4
   pickupEffect: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+  Collecting: {fileID: 3604187992922335149}
 --- !u!82 &3604187992922335149
 AudioSource:
   m_ObjectHideFlags: 0

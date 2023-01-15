@@ -87,7 +87,6 @@ public class Player : MonoBehaviour
             temp.y = 2f;
             transform.localScale = temp;
             GameOverSound.Play();
-            
         } 
         else if (other.gameObject.CompareTag("Scoring")) 
         {

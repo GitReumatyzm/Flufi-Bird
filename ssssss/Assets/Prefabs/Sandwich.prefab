@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6816101845019890608}
   - component: {fileID: 4307766119766128200}
   - component: {fileID: 4074321664821738062}
+  - component: {fileID: 5899271623993898581}
   m_Layer: 0
   m_Name: Sandwich
   m_TagString: MyFood
@@ -212,3 +213,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5899271623993898581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2529477940846183910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2ec685e073d0b449b57f59e850bf97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplier: 1.4
+  pickupEffect: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+  Collecting: {fileID: 4074321664821738062}

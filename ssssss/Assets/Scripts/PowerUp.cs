@@ -7,6 +7,7 @@ public class PowerUp : MonoBehaviour
     public float multiplier = 1.4f;
 
     public GameObject pickupEffect;
+    public AudioSource Collecting;
 
 
     void OnTriggerEnter2D (Collider2D other)
@@ -22,7 +23,9 @@ public class PowerUp : MonoBehaviour
         Instantiate(pickupEffect, transform.position, transform.rotation);
         
         player.transform.localScale /= multiplier;
-        Physics.gravity = new Vector3(0, -5, 0);
+        Physics.gravity *= multiplier;
+        GetComponent<AudioSource>();
+        Collecting.Play();
        
         Destroy(gameObject);
     }

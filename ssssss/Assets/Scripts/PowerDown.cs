@@ -7,6 +7,7 @@ public class PowerDown : MonoBehaviour
     public float multiplier = 1.4f;
 
     public GameObject pickupEffect;
+    public AudioSource Collecting;
 
     void OnTriggerEnter2D (Collider2D other)
     {
@@ -18,12 +19,10 @@ public class PowerDown : MonoBehaviour
 
     void Pickup(Collider2D player)
     {
-        //1
         Instantiate(pickupEffect, transform.position, transform.rotation);
-        //2
         player.transform.localScale *= multiplier;
         Physics.gravity = new Vector3(0, -45, 0);
-        //3
+        Collecting.Play();
         Destroy(gameObject);
     }
 }
