@@ -22,7 +22,6 @@ public class Player : MonoBehaviour
     {
         InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
         Physics.gravity = new Vector3(0, -13, 0);
-        transform.localScale = Vector3.one;
     }
 
     private void OnEnable()
