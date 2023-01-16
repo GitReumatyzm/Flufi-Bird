@@ -12,9 +12,10 @@ public class GameManager : MonoBehaviour
    public GameObject RetryButton;
    public GameObject gameOver;
    public GameObject MainTitle;
-   public GameObject GetReady;
    public AudioSource HubMusic;
+   public GameObject Instructions;
    public AudioSource GameplayMusic;
+   public GameObject GetReady;
 
    private int score;
 
@@ -25,6 +26,9 @@ public class GameManager : MonoBehaviour
       HubMusic.Play();  
       GameplayMusic.Stop();
       MainTitle.SetActive(true);
+      Instructions.SetActive(true);
+      gameOver.SetActive(false);
+      GetReady.SetActive(true);
       
       Pause();
    }
@@ -38,6 +42,8 @@ public class GameManager : MonoBehaviour
       MainTitle.SetActive(false);
       RetryButton.SetActive(false);
       gameOver.SetActive(false);
+      Instructions.SetActive(false);
+      GetReady.SetActive(false);
 
       Time.timeScale = 1f;
       player.enabled = true;
@@ -67,6 +73,7 @@ public class GameManager : MonoBehaviour
      gameOver.SetActive(true);
      RetryButton.SetActive(true);
      playButton.SetActive(false);
+     Instructions.SetActive(true);
      Pause();
 
    }
