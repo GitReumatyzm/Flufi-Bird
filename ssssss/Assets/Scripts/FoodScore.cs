@@ -14,11 +14,6 @@ public class FoodScore : MonoBehaviour
         ScoreNum = 0;
         FoodScoreText.text = "   :0" + ScoreNum;
     }
-
-    void Pause()
-    {
-      ScoreNum = 0;
-    }
     
     private void OnTriggerEnter2D(Collider2D Food)
     {
@@ -27,7 +22,6 @@ public class FoodScore : MonoBehaviour
          ScoreNum += 1;
          Destroy(Food.gameObject);
          FoodScoreText.text = "  :0" + ScoreNum;
-         GetComponent<AudioSource>().Play();
        }
     }
 }

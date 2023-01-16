@@ -21,7 +21,7 @@ public class PowerDown : MonoBehaviour
     {
         Instantiate(pickupEffect, transform.position, transform.rotation);
         player.transform.localScale *= multiplier;
-        Physics.gravity = new Vector3(0, -45, 0);
+        Physics.gravity *= multiplier;
         Collecting.Play();
         Destroy(gameObject);
     }

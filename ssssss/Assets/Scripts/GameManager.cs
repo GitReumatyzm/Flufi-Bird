@@ -9,7 +9,10 @@ public class GameManager : MonoBehaviour
    public Player player;
    public Text scoreText;
    public GameObject playButton;
+   public GameObject RetryButton;
    public GameObject gameOver;
+   public GameObject MainTitle;
+   public GameObject GetReady;
    public AudioSource HubMusic;
    public AudioSource GameplayMusic;
 
@@ -17,10 +20,11 @@ public class GameManager : MonoBehaviour
 
    private void Awake()
    {
-       Application.targetFrameRate = 60;    
+      Application.targetFrameRate = 60;    
 
       HubMusic.Play();  
       GameplayMusic.Stop();
+      MainTitle.SetActive(true);
       
       Pause();
    }
@@ -31,6 +35,8 @@ public class GameManager : MonoBehaviour
       scoreText.text = score.ToString();
 
       playButton.SetActive(false);
+      MainTitle.SetActive(false);
+      RetryButton.SetActive(false);
       gameOver.SetActive(false);
 
       Time.timeScale = 1f;
@@ -59,8 +65,8 @@ public class GameManager : MonoBehaviour
    {
 
      gameOver.SetActive(true);
-     playButton.SetActive(true);
-
+     RetryButton.SetActive(true);
+     playButton.SetActive(false);
      Pause();
 
    }
@@ -70,4 +76,5 @@ public class GameManager : MonoBehaviour
       score++;
       scoreText.text = score.ToString();
    }
+
 }
